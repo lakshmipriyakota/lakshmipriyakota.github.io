@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link href="../styles/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <ul class="menu">
+                <li class="nav-item active"><a href="#home1">Home</a></li>
+                <li class="nav-item"><a href="#about1">About</a></li>
+                <li class="nav-item"><a href="#contact1" >Contact</a></li>
+                <li class="nav-item"><a href="#gallery1"  >Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="tabs">
+            <iframe src="home.html" id="home1"></iframe>
+            <iframe src="about.html" id="about1"></iframe>
+            <iframe src="contact.html" id="contact1"></iframe>
+            <iframe src="gallery.html" id="gallery1"></iframe>
+        </div>
+    </body>
+</html>
+
+<script>
+    var btnContainer = document.getElementsByClassName("menu");
+    var btns = btnContainer[0].getElementsByClassName("nav-item");
+
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    } 
+</script>
