@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Restaurant</title>
+        <link href="./style.css" rel="stylesheet"/>
+    </head>
+    <body>
+            <content class="content" >
+                <div class="tables">
+                    <h2>Tables</h2>
+                    <input type="text" id="search-table"  onkeyup="filterTable()" placeholder="Search table"/>
+                    <ul class="tables-list">
+                    </ul>
+                </div>
+                <div class="menu">
+                    <h2>Menu</h2>
+                    <input type="text" onkeyup="filterMenu()" size="26" placeholder="Search menu ... by course, by food"/>
+                    <ul class="menu-list">
+                    </ul>
+                </div>
+
+<!-- To show order details -->
+
+                <div id="order" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2></h2>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th></th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" value="Generate Bill">
+                        </div>
+                    </div>
+                </div>
+
+<!-- To show bill for selected table -->
+                
+                <div id="bill" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2></h2>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" value="Print">
+                        </div>
+                    </div>
+                </div>
+
+            </content>
+    </body>
+</html>
+
+<script src="./scripts/init.js"></script>
+<script src="./scripts/filter.js"></script>
+<script src="./scripts/updateTable.js"></script>
+<script src="./scripts/drag.js"></script>
+<script src="./scripts/dynamic.js"></script>
