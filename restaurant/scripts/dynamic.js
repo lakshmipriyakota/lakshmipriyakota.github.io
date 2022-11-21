@@ -12,6 +12,7 @@ function showOrder(id) {
         let tr = document.createElement('tr');
         let tds = document.createElement('td');
         let tdName = document.createElement('td');
+        tdName.setAttribute('class','tdName');
         let tdPrice = document.createElement('td');
         let tdQuant = document.createElement('td');
         let tdrem = document.createElement('td');
@@ -23,10 +24,11 @@ function showOrder(id) {
         inp.setAttribute('step',1);
         inp.setAttribute('min',1);
         inp.setAttribute('value',tarr[2][i]);
+        inp.setAttribute('size','3');
         tdQuant.appendChild(inp);
-        let btn = document.createElement('input');
+        let btn = document.createElement('button');
         btn.setAttribute('type','button');
-        btn.setAttribute('value','remove');
+        btn.setAttribute('class','delete');
         tdrem.appendChild(btn);
         tr.appendChild(tds);
         tr.appendChild(tdName);
@@ -83,6 +85,7 @@ function generateBill(id) {
         let tr = document.createElement('tr');
         let tds = document.createElement('td');
         let tdName = document.createElement('td');
+        tdName.setAttribute('class','tdName');
         let tdPrice = document.createElement('td');
         let tdQuant = document.createElement('td');
         let tdCost = document.createElement('td');

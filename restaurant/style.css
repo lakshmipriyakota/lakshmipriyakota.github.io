@@ -75,7 +75,7 @@ h3 {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 40%; /* Could be more or less, depending on screen size */
 }
   
 /* The Close Button */
@@ -100,14 +100,25 @@ h3 {
 table {
     width: 100%;
 }
-table input{
-    width: 100%;
+
+table input {
+    width: 50%;
 }
+
 td {
     text-align: center;
 }
+
 .totalCost {
     background-color: rgb(175, 210, 241);
+}
+
+.delete {
+    background-image: url('./images/delete.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin: 0 20px;
 }
 
 
